@@ -1,0 +1,89 @@
+body > p {
+    font-size: 1.5rem;
+    text-align: center;
+    border: 2px dotted;
+    margin: 0px 10px;
+}
+
+div#header {
+    font-size: 1.2rem;
+    padding: 10px;
+    margin: 0px 0px;
+}
+
+div#header > p {
+    background-color: cyan;
+    margin-bottom: 2px;
+}
+
+div#footer {
+    font-size: 1.2rem;
+    background-color:coral;
+}
+
+ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content:space-around; /* 左右均等分布 */
+    background-color: chartreuse;
+    margin-top: 10px;
+}
+
+ul li a {
+    flex:1;
+    font-size: 1.2rem;
+    margin-bottom: 0px;
+}
+  
+.animal {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 1px;
+    margin-bottom: 5px;
+}
+
+.animal > div {
+    flex: 1 20%;
+    height: 300px;
+    border: 2px dotted;
+    margin-top: 4px;
+    background-color: cornsilk;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid;
+
+}
+
+.f1 {
+    float: left;
+    margin-right: 5%;    
+}
+  
+.f-item01 { order: 1; }
+.f-item02 { order: 2; }
+.f-item03 { order: 3; }
+.f-item04 { order: 4; }
+.f-item05 { order: 5; }
+.f-item06 { order: 6; }
+
+@media (max-width: 922px) {
+    .animal {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    
+    .animal > div {
+        flex: 1 30%;
+        height: 300px;
+        border: 2px dotted;
+    }

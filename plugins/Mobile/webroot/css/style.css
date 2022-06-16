@@ -1,0 +1,86 @@
+body > p {
+    font-size: 1.0rem;
+    text-align: center;
+}
+
+div#header {
+    font-size: 1.0rem;
+    padding: 10px;
+    background-color:chartreuse;
+}
+
+div#footer {
+    font-size: 1.0rem;
+    background-color:coral;
+}
+
+ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content:space-around /* 左右均等分布 */
+}
+
+ul li a {
+    flex:1;
+    font-size: 1.0rem;
+}
+
+.animal {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.animal > div {
+    flex: 1 80%;
+    margin-top: 2%;
+    border: 2px dotted;
+    background-color:greenyellow;
+ 
+}
+
+.animal div p {
+    font-size: 1.0rem;
+    color:blue;
+}
+
+.animal div img {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid;
+}
+
+.f1 {
+    float: left;
+    margin-right: 2%;    
+}
+
+.f-item01 {  order: 1; }
+.f-item02 {  order: 2; }
+.f-item03 {  order: 3; }
+.f-item04 {  order: 4; }
+.f-item05 {  order: 5; }
+.f-item06 {  order: 6; }
+
+@media screen and (min-width: 600px) and (max-width: 687px) {
+
+    .animal {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .animal > div {
+        flex: 1 40%;
+        height: 300px;
+        background-color:cornsilk;
+    }
+
+    .f1 {
+        float: left;
+    }
+
+}

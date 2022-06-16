@@ -1,0 +1,1 @@
+<?= "PagesController test from display.ctp file......." ?>
