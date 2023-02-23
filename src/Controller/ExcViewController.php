@@ -19,15 +19,15 @@ class ExcViewController extends AppController{
         $this->loadComponent('Security');
         $this->loadComponent('Flash');
         $this->loadComponent('Cookie');
-        //$this->loadComponent('Csrf');
-        $this->Auth->allow(['tom','fumiko1','fumiko2','fumiko3','fumiko4','csrf','setCookie','getCookie']);
+        $this->loadComponent('Csrf');
+        $this->Auth->allow(['tom','fumiko1','fumiko2','fumiko3','fumiko4','csrf','setCookie','getCookie','ajaxOne','ajaxTwo']);
     }
 
     public function beforeFilter(Event $event)
     {
          //$this->Security->setConfig('unlockedActions', ['tom']);
          $this->Cookie->config('path', '/');
-         //$this->eventManager()->off($this->Csrf);
+         $this->eventManager()->off($this->Csrf);
     }
 
     public function afterFilter(Event $event)
@@ -72,8 +72,8 @@ class ExcViewController extends AppController{
     public function fumiko4() {
         $this ->autoLayout = true;
         $this->autoRender = true;
-
         $this->viewBuilder()->setLayout('fmlayout-4');
+
         $this->Flash->set('---- Flash test from /fumiko4() ----');
         $this->set('msg',"fumichan !!");  
     }
@@ -183,5 +183,7 @@ class ExcViewController extends AppController{
         $this->set('msg', '---- /index() ----');
   
     }
+
+
 }
 ?>
