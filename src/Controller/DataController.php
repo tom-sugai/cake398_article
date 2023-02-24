@@ -46,8 +46,10 @@ class DataController extends AppController
     }
 
     public function index(){
-        $this ->autoLayout = false;
+        $this ->autoLayout = true;
         $this->autoRender = true;
+        $this->viewBuilder()->setLayout('ajax');
+        
         $this->set('ajax_name','send_data.js');
     }
 }
