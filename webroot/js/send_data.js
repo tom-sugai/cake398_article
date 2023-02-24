@@ -16,8 +16,8 @@ $(document).ready(function()
         $.ajax({
             type: 'POST',
             datatype:'json',
-            //url: "http://localhost/cake398_article/data/add",
-            url: '/cake398_article/data/add',
+            //url: "http://localhost/cake3/cake398_article/data/add",
+            url: '/cake3/cake398_article/data/add',
             data: data,
             success: function(data,dataType)
             {         
