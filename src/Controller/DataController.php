@@ -20,7 +20,7 @@ class DataController extends AppController
         $this->loadComponent('Flash');
         //$this->loadComponent('Cookie');
         //$this->loadComponent('Csrf');
-        $this->Auth->allow(['index', 'data']);
+        $this->Auth->allow(['index', 'data','add']);
     }
 
     public function beforeFilter(Event $event)
@@ -28,15 +28,17 @@ class DataController extends AppController
         //$this->Security->setConfig('unlockedActions', ['tom']);
         //$this->Cookie->config('path', '/');
         //$this->eventManager()->off($this->Csrf);
-         
+        /**
         if($this->request->action == 'add'){
             //$this->getEventManager()->off($this->Csrf);
         }
+        */
     }
 
     public function afterFilter(Event $event)
     {
         parent::afterFilter($event);
+
     }
 
     public function add(){
@@ -49,7 +51,18 @@ class DataController extends AppController
         $this ->autoLayout = true;
         $this->autoRender = true;
         $this->viewBuilder()->setLayout('ajax');
-        
+
+        $params = $this->request->getAttribute('params');
+        //debug($params);
+        $this->response->cors($this->request)
+        ->allowOrigin(['*.localhost'])
+        ->allowMethods(['GET', 'POST'])
+        ->allowHeaders(['X-CSRF-Token'])
+        ->allowCredentials()
+        ->exposeHeaders(['Link'])
+        ->maxAge(300)
+        ->build();
+    
         $this->set('ajax_name','send_data.js');
     }
 }
