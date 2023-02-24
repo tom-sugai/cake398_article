@@ -5,6 +5,9 @@ $(document).ready(function()
      */
     $('#send').click(function()
     {
+        // Formヘルパーで生成したCSRFトークンの値を取得
+        var csrf = $('input[name=_csrfToken]').val();
+
         var data = { request : $('#textdata').val() };
         alert( $('#textdata').val() );
         /**
@@ -19,6 +22,10 @@ $(document).ready(function()
             //url: "http://localhost/cake3/cake398_article/data/add",
             url: '/cake3/cake398_article/data/add',
             data: data,
+            // ここが本丸。CSRFトークンをセット
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader('X-CSRF-Token', csrf);
+            },
             success: function(data,dataType)
             {         
                 alert('Success');
