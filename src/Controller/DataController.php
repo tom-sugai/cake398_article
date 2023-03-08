@@ -48,9 +48,9 @@ class DataController extends AppController
     }
 
     public function index(){
-        $this ->autoLayout = true;
+        $this ->autoLayout = false;
         $this->autoRender = true;
-        $this->viewBuilder()->setLayout('ajax');
+        //$this->viewBuilder()->setLayout('ajax');
 
         $params = $this->request->getAttribute('params');
         //debug($params);
