@@ -54,6 +54,8 @@ class DataController extends AppController
 
         $params = $this->request->getAttribute('params');
         //debug($params);
+        
+        /** 
         $this->response->cors($this->request)
         ->allowOrigin(['*.localhost'])
         ->allowMethods(['GET', 'POST'])
@@ -62,7 +64,8 @@ class DataController extends AppController
         ->exposeHeaders(['Link'])
         ->maxAge(300)
         ->build();
-    
+        */
+
         $this->set('ajax_name','send_data.js');
     }
 }
