@@ -7,7 +7,6 @@ $(document).ready(function()
     {
         // Formヘルパーで生成したCSRFトークンの値を取得
         var csrf = $('input[name=_csrfToken]').val();
-
         var data = { request : $('#textdata').val() };
         alert( $('#textdata').val() );
         /**
