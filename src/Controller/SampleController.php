@@ -5,6 +5,7 @@ use Cake\Controller\Controller;
 use Cake\Event\Event;
 use Cake\Routing\Router;
 
+// exercise for Mobile check
 class SampleController extends AppController {
     public function initialize()
     {
