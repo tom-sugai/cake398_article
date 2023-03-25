@@ -19,15 +19,15 @@ class SampleController extends AppController {
 
             if ($this->request->isTablet()) {
                 //debug("タブレットです");
-                //$this->viewBuilder()->setTheme('Tablet'); // ←これを追加
+                $this->viewBuilder()->setTheme('Tablet'); // ←これを追加
                 //debug("PCです");
-                $this->viewBuilder()->setTheme('MyTheme'); // ←これを追加
+                //$this->viewBuilder()->setTheme('MyTheme'); // ←これを追加
 
             } else {
                 // debug("スマホです");
-                //$this->viewBuilder()->setTheme('Mobile'); // ←これを追加
+                $this->viewBuilder()->setTheme('Mobile'); // ←これを追加
                 //debug("PCです");
-                $this->viewBuilder()->setTheme('MyTheme'); // ←これを追加
+                //$this->viewBuilder()->setTheme('MyTheme'); // ←これを追加
             }
 
         } else {
