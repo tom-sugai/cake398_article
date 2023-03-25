@@ -11,6 +11,7 @@ use Cake\Routing\Router;
 use Cake\Controller\Component\CookieComponent;
 use Cake\Controller\Component\CsrfComponent;
 
+// exercise for ajax request => database write
 class DataController extends AppController
 {
     public function initialize()
