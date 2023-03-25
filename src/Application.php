@@ -53,6 +53,7 @@ class Application extends BaseApplication
         $this->addPlugin('MyTheme'); // ← これを追加
         $this->addPlugin('Mobile');
         $this->addPlugin('Tablet');
+        $this->addPlugin('Migrations');
     }
 
     /**
